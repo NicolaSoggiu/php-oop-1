@@ -20,14 +20,14 @@ include __DIR__ . "/db.php";
         defer></script>
 </head>
 
-<body>
+<body class="bg-dark">
     <div class="container">
 
         <h1 class="text-center text-danger mb-4">MOVIES</h1>
 
         <ul class="row cards-container d-flex justify-content-between flex-wrap">
             <?php foreach ($movies as $movie) : ?>
-            <li class="mb-4 col col-4">
+            <li class="mb-4 col col-4 text-light list-unstyled">
                 <?php $movie->printMovie(); ?>
             </li>
             <?php endforeach; ?>

@@ -24,7 +24,7 @@ class Movies
         echo "<h3>{$this->director}</h3>";
         echo "<h4>{$this->year}</h4>";
         echo "<span>{$this->playingTime}</span>";
-        echo "<ul>";
+        echo "<ul> Genres: ";
         foreach ($this->genre->movieGenre as $genre) {
             echo "<li>{$genre}</li>";
         }
