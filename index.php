@@ -2,9 +2,7 @@
 
 include __DIR__ . "/models/Movies.php";
 include __DIR__ . "/models/Genres.php";
-
-$Batman = new Movies("Batman Begins", "Christopher Nolan", "2005", "140 min", new Genres(["Sporty", "Drammatic"]));
-$CC = new Movies("Coach Carter", "Thomas Carter", "2005", "136 min", new Genres(["Sporty", "Drammatic"]));
+include __DIR__ . "/db.php";
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +18,11 @@ $CC = new Movies("Coach Carter", "Thomas Carter", "2005", "136 min", new Genres(
 
     <h1>MOVIES</h1>
     <ul>
+        <?php foreach ($movies as $movie) : ?>
         <li>
-            <?php echo $Batman->printMovie() ?>
+            <?php $movie->printMovie(); ?>
         </li>
-        <li>
-            <?php echo $CC->printMovie() ?>
-        </li>
+        <?php endforeach; ?>
     </ul>
 </body>
 
