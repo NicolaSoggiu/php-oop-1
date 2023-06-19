@@ -25,9 +25,9 @@ include __DIR__ . "/db.php";
 
         <h1 class="text-center text-danger mb-4">MOVIES</h1>
 
-        <ul class="cards-container d-flex justify-content-between flex-wrap">
+        <ul class="row cards-container d-flex justify-content-between flex-wrap">
             <?php foreach ($movies as $movie) : ?>
-            <li class="mb-5">
+            <li class="mb-4 col col-4">
                 <?php $movie->printMovie(); ?>
             </li>
             <?php endforeach; ?>
