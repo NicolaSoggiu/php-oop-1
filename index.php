@@ -3,8 +3,8 @@
 include __DIR__ . "/models/Movies.php";
 include __DIR__ . "/models/Genres.php";
 
-$Batman = new Movies("Batman Begins", "Christopher Nolan", "2005", "140 min", new Genres(["Action, Fantasy"]));
-$CC = new Movies("Coach Carter", "Thomas Carter", "2005", "136 min", new Genres(["Sporty, Drammatic"]));
+$Batman = new Movies("Batman Begins", "Christopher Nolan", "2005", "140 min", new Genres(["Sporty", "Drammatic"]));
+$CC = new Movies("Coach Carter", "Thomas Carter", "2005", "136 min", new Genres(["Sporty", "Drammatic"]));
 ?>
 
 <!DOCTYPE html>
