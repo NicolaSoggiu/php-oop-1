@@ -4,14 +4,16 @@ class Movies
 {
     public string $name;
     public string $director;
+    public string $year;
     public string $playingTime;
-    public string $genre;
+    public Genres $genre;
 
 
-    public function __construct($name, $director, $playingTime, $genre)
+    public function __construct($name, $director, $year, $playingTime, Genres $genre)
     {
         $this->name = $name;
         $this->director = $director;
+        $this->year = $year;
         $this->playingTime = $playingTime;
         $this->genre = $genre;
     }
@@ -20,7 +22,12 @@ class Movies
     {
         echo "<h1>{$this->name}</h1>";
         echo "<h3>{$this->director}</h3>";
+        echo "<h4>{$this->year}</h4>";
         echo "<span>{$this->playingTime}</span>";
-        echo "<h4>{$this->genre}</h4>";
+        echo "<ul>";
+        foreach ($this->genre as $genre) {
+            echo "<li>{$genre}</li>";
+        }
+        echo "</ul>";
     }
 }
